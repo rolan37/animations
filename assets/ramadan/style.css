@@ -39,7 +39,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: transparent url('./assets/ramadan/background.png') repeat top center;
+    background: transparent url('./background.png') repeat top center;
     z-index: 0;
 }
 
@@ -49,7 +49,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: transparent url('https://i.imgur.com/XYMF4ca.png') repeat top center;
+    /* background: transparent url('./cloud.png') repeat top center; */
     z-index: 1;
     animation: move-twink-back 200s linear infinite;
 }
