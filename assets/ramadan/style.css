@@ -331,11 +331,11 @@ body {
 }
 
 .minaret {
-    width: 30px;
+/*     width: 30px; */
     height: 150px;
     background: rgba(30, 30, 60, 0.8);
     position: absolute;
-    bottom: 120px;
+    bottom: 0;
 }
 
 .minaret::before {
