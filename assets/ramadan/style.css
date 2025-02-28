@@ -1,265 +1,276 @@
-@import url('https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&display=swap");
 
 :root {
-    --primary-color: #259bc2;
-    --secondary-color: #72c341;
-    --background: #0B1942;
+  --primary-color: #259bc2;
+  --secondary-color: #72c341;
+  --background: #0b1942;
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    font-family: 'Amiri', serif;
-    overflow: hidden;
-    height: 100vh;
-    background: var(--background);
+  font-family: "Amiri", serif;
+  overflow: hidden;
+  height: 100vh;
+  background: var(--background);
 }
 
 .container {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    padding: 2vh 0;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2vh 0;
 }
 
 /* Stars background */
-.stars, .twinkling {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
+.stars,
+.twinkling {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
 }
 
 .stars {
-    background: transparent url('https://i.imgur.com/YKY28eT.png') repeat top center;
-    z-index: 0;
+/*   background: transparent url("https://i.imgur.com/YKY28eT.png") repeat top center; */
+  z-index: 0;
 }
 
 .twinkling {
-    background: transparent url('https://i.imgur.com/XYMF4ca.png') repeat top center;
-    z-index: 1;
-    animation: move-twink-back 200s linear infinite;
+/*   background: transparent url("https://i.imgur.com/XYMF4ca.png") repeat top center; */
+  z-index: 1;
+  animation: move-twink-back 200s linear infinite;
 }
 
 @keyframes move-twink-back {
-    from {background-position: 0 0;}
-    to {background-position: -10000px 5000px;}
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -10000px 5000px;
+  }
 }
 
 /* Logo */
 .logo-container {
-    position: relative;
-    z-index: 5;
-    width: 150px;
-    margin-top: 20px;
+  position: relative;
+  z-index: 5;
+  width: 150px;
+  margin-top: 20px;
 }
 
 #logo {
-    width: 100%;
-    height: auto;
+  width: 100%;
+  height: auto;
 }
 
 /* Moon */
 .moon-container {
-    position: absolute;
-    top: 5vh;
-    right: 10vw;
-    z-index: 2;
+  position: absolute;
+  top: 5vh;
+  right: 10vw;
+  z-index: 2;
 }
 
 .moon {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    background: var(--primary-color);
-    position: relative;
-    overflow: hidden;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: var(--primary-color);
+  position: relative;
+  overflow: hidden;
 }
 
 .moon::before {
-    content: '';
-    position: absolute;
-    top: -10px;
-    left: 15px;
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    background: var(--background);
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: 15px;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: var(--background);
 }
 
 /* Lanterns */
 .lantern {
-    position: absolute;
-    width: 40px;
-    height: 60px;
-    background: var(--secondary-color);
-    border-radius: 5px;
-    z-index: 3;
-    animation: float 3s ease-in-out infinite;
+  position: absolute;
+  width: 40px;
+  height: 60px;
+  background: var(--secondary-color);
+  border-radius: 5px;
+  z-index: 3;
+  animation: float 3s ease-in-out infinite;
 }
 
 .lantern-1 {
-    top: 20%;
-    left: 20%;
-    animation-delay: -1s;
+  top: 20%;
+  left: 20%;
+  animation-delay: -1s;
 }
 
 .lantern-2 {
-    top: 15%;
-    left: 50%;
-    animation-delay: -0.5s;
+  top: 15%;
+  left: 50%;
+  animation-delay: -0.5s;
 }
 
 .lantern-3 {
-    top: 25%;
-    right: 20%;
-    animation-delay: -1.5s;
+  top: 25%;
+  right: 20%;
+  animation-delay: -1.5s;
 }
 
 @keyframes float {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-20px); }
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
 }
 
 /* Greeting */
 .greeting {
-    position: relative;
-    z-index: 4;
-    text-align: center;
+  position: relative;
+  z-index: 4;
+  text-align: center;
 }
 
 .ramadan-text {
-    font-size: 48px;
-    color: var(--primary-color);
-    margin: 0;
+  font-size: 48px;
+  color: var(--primary-color);
+  margin: 0;
 }
 
 /* Mosque */
 .mosque {
-    position: relative;
-    width: 100%;
-    height: 150px;
-    z-index: 3;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    margin-bottom: 20px;
+  position: relative;
+  width: 100%;
+  height: 150px;
+  z-index: 3;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  margin-bottom: 20px;
 }
 
 .mosque-body {
-    width: 300px;
-    height: 80px;
-    background: #0a1535;
-    border-radius: 20px 20px 0 0;
-    position: relative;
+  width: 300px;
+  height: 80px;
+  background: #0a1535;
+  border-radius: 20px 20px 0 0;
+  position: relative;
 }
 
 .dome {
-    width: 60px;
-    height: 60px;
-    background: var(--secondary-color);
-    border-radius: 100px 100px 0 0;
-    position: absolute;
-    bottom: 80px;
-    left: 50%;
-    transform: translateX(-50%);
+  width: 60px;
+  height: 60px;
+  background: var(--secondary-color);
+  border-radius: 100px 100px 0 0;
+  position: absolute;
+  bottom: 80px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .minaret {
-    width: 20px;
-    height: 120px;
-    background: #0a1535;
-    position: absolute;
-    bottom: 80px;
+  width: 20px;
+  height: 120px;
+  background: #0a1535;
+  position: absolute;
+  bottom: 80px;
 }
 
 .minaret::before {
-    content: '';
-    position: absolute;
-    top: -20px;
-    left: 0;
-    width: 20px;
-    height: 20px;
-    background: var(--secondary-color);
-    border-radius: 20px 20px 0 0;
+  content: "";
+  position: absolute;
+  top: -20px;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  background: var(--secondary-color);
+  border-radius: 20px 20px 0 0;
 }
 
 .minaret.left {
-    left: 40px;
+  left: 10px;
 }
 
 .minaret.right {
-    right: 40px;
+  right: 10px;
 }
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-    .container {
-        padding: 1vh 0;
-    }
+  .container {
+    padding: 1vh 0;
+  }
 
-    .logo-container {
-        width: 100px;
-        margin-top: 10px;
-    }
+  .logo-container {
+    width: 100px;
+    margin-top: 10px;
+  }
 
-    .moon {
-        width: 60px;
-        height: 60px;
-    }
+  .moon {
+    width: 60px;
+    height: 60px;
+  }
 
-    .moon::before {
-        width: 60px;
-        height: 60px;
-    }
+  .moon::before {
+    width: 60px;
+    height: 60px;
+  }
 
-    .lantern {
-        width: 30px;
-        height: 45px;
-    }
+  .lantern {
+    width: 30px;
+    height: 45px;
+  }
 
-    .ramadan-text {
-        font-size: 36px;
-    }
+  .ramadan-text {
+    font-size: 36px;
+  }
 
-    .mosque-body {
-        width: 200px;
-        height: 60px;
-    }
+  .mosque-body {
+    width: 200px;
+    height: 60px;
+  }
 
-    .dome {
-        width: 40px;
-        height: 40px;
-        bottom: 60px;
-    }
+  .dome {
+    width: 40px;
+    height: 40px;
+    bottom: 60px;
+  }
 
-    .minaret {
-        width: 15px;
-        height: 80px;
-        bottom: 60px;
-    }
+  .minaret {
+    width: 15px;
+    height: 80px;
+    bottom: 60px;
+  }
 
-    .minaret::before {
-        width: 15px;
-        height: 15px;
-        top: -15px;
-    }
+  .minaret::before {
+    width: 15px;
+    height: 15px;
+    top: -15px;
+  }
 
-    .minaret.left {
-        left: 30px;
-    }
+  .minaret.left {
+    left: 5px;
+  }
 
-    .minaret.right {
-        right: 30px;
-    }
+  .minaret.right {
+    right: 5px;
+  }
 }
+
