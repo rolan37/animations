@@ -31,7 +31,17 @@ body {
 }
 
 /* Stars background */
-.stars,
+.stars {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+/*   background: transparent url("https://i.imgur.com/YKY28eT.png") repeat top center; */
+  z-index: 0;
+}
+
 .twinkling {
   position: absolute;
   top: 0;
@@ -39,14 +49,6 @@ body {
   width: 100%;
   height: 100%;
   pointer-events: none;
-}
-
-.stars {
-/*   background: transparent url("https://i.imgur.com/YKY28eT.png") repeat top center; */
-  z-index: 0;
-}
-
-.twinkling {
 /*   background: transparent url("https://i.imgur.com/XYMF4ca.png") repeat top center; */
   z-index: 1;
   animation: move-twink-back 200s linear infinite;
@@ -205,11 +207,11 @@ body {
 }
 
 .minaret.left {
-  left: 10px;
+  left: 0;
 }
 
 .minaret.right {
-  right: 10px;
+  right: 0;
 }
 
 /* Responsive adjustments */
@@ -266,11 +268,11 @@ body {
   }
 
   .minaret.left {
-    left: 5px;
+    left: 0;
   }
 
   .minaret.right {
-    right: 5px;
+    right: 0;
   }
 }
 
